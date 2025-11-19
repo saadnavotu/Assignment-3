@@ -1,14 +1,26 @@
 <%- include ./partials/header.ejs %>
 <%- include ./partials/main_nav.ejs %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/Content/recipes.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center">
+      <div class="hero-content">
+
+        <h1 class="display-4 fw-bold text-white mb-3">Welcome to Recipe Manager</h1>
+
+        <p class="lead text-white-50 mb-4">
+          Store, organize, and manage your favorite recipes all in one place.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/recipes" class="btn btn-primary btn-lg shadow">
+            <i class="fa-solid fa-book"></i> View Recipes
+          </a>
+
+          <a href="/recipes/add" class="btn btn-outline-light btn-lg shadow">
+            <i class="fa-solid fa-circle-plus"></i> Add Recipe
+          </a>
+        </div>
+
+      </div>
+    </section>
+
 <%- include ./partials/footer.ejs %>

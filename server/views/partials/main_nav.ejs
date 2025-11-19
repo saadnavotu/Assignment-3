@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+            <img src="/media/RecipeManager_logo.png" alt="Logo" width="36" height="36" class="rounded">
+            <span>Recipe Manager</span>
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <!-- HOME -->
+                <li class="nav-item">
+                    <% if (typeof title !== 'undefined' && title=="Home") { %>
+                        <a class="nav-link active" href="/">
+                            <i class="fa-solid fa-house fa-lg"></i> Home
+                        </a>
+                        <% } else { %>
+                            <a class="nav-link" href="/">
+                                <i class="fa-solid fa-house fa-lg"></i> Home
+                            </a>
+                            <% } %>
+                </li>
+
+                <!-- RECIPES LIST -->
+                <li class="nav-item">
+                    <% if (typeof title !== 'undefined' && title=="Recipe") { %>
+                        <a class="nav-link active" href="/recipes">
+                            <i class="fa-solid fa-book fa-lg"></i> Recipes
+                        </a>
+                        <% } else { %>
+                            <a class="nav-link" href="/recipes">
+                                <i class="fa-solid fa-book fa-lg"></i> Recipes
+                            </a>
+                            <% } %>
+                </li>
+
+                <!-- ADD RECIPE -->
+                <li class="nav-item">
+                    <% if (typeof title !== 'undefined' && title=="Add Recipe") { %>
+                        <a class="nav-link active" href="/recipes/add">
+                            <i class="fa-solid fa-circle-plus fa-lg"></i> Add Recipe
+                        </a>
+                        <% } else { %>
+                            <a class="nav-link" href="/recipes/add">
+                                <i class="fa-solid fa-circle-plus fa-lg"></i> Add Recipe
+                            </a>
+                            <% } %>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
