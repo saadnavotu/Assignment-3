@@ -10,7 +10,7 @@ a {
 /* ===== Hero Section ===== */
 .hero-section {
     height: 75vh;
-    background: url('/media/recipe-bg.jpg') center/cover no-repeat;
+    background: url('/media/RecipeManager_logo.png') center/cover no-repeat;
     position: relative;
 }
 
