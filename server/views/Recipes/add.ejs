@@ -1,9 +1,102 @@
 <%- include ../partials/header.ejs %>
 <%- include ../partials/main_nav.ejs %>
+<div class="container py-5">
 
+    <div class="row justify-content-center">
+        <div class="col-md-7">
 
+            <!-- Page Title -->
+            <h1 class="text-center fw-bold mb-4">
+                <i class="fas fa-plus-circle"></i> <%= title %>
+            </h1>
 
+            <!-- Add Recipe Card -->
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
 
+                    <form method="post">
 
+                        <!-- Recipe Name -->
+                        <div class="mb-3">
+                            <label for="nameField" class="form-label fw-semibold">
+                                Recipe Name
+                            </label>
+                            <input
+                                type="text"
+                                id="nameField"
+                                name="name"
+                                class="form-control"
+                                placeholder="Enter recipe name"
+                                required
+                            >
+                        </div>
 
+                        <!-- Ingredients -->
+                        <div class="mb-3">
+                            <label for="ingredientsField" class="form-label fw-semibold">
+                                Ingredients
+                            </label>
+                            <textarea
+                                id="ingredientsField"
+                                name="ingredients"
+                                rows="4"
+                                class="form-control"
+                                placeholder="List all ingredients"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div class="mb-3">
+                            <label for="instructionsField" class="form-label fw-semibold">
+                                Instructions
+                            </label>
+                            <textarea
+                                id="instructionsField"
+                                name="instructions"
+                                rows="5"
+                                class="form-control"
+                                placeholder="Write clear cooking steps"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- Cook Time -->
+                        <div class="mb-3">
+                            <label for="timeField" class="form-label fw-semibold">
+                                Cook Time
+                            </label>
+                            <input
+                                type="text"
+                                id="timeField"
+                                name="cookTime"
+                                class="form-control"
+                                placeholder="e.g., 20 minutes, 1 hour"
+                            >
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between mt-4">
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn-success px-4">
+                                <i class="fas fa-check-circle"></i> Add Recipe
+                            </button>
+
+                            <!-- Cancel -->
+                            <a href="/recipes" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Cancel
+                            </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
 <%- include ../partials/footer.ejs %>

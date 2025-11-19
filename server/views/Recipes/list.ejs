@@ -49,8 +49,9 @@
                                     </td>
 
                                     <td class="text-center">
-                                        <a href="/recipes/delete/<%= RecipeList[i]._id %>"
-                                            class="btn btn-danger btn-sm">
+                                        <a href="/recipes/delete/<%= RecipeList[i]._id%>"
+                                            class="btn btn-danger btn-sm"
+                                            onclick="return confirm('Are you sure you want to delete this recipe?');">
                                             <i class="fas fa-trash-alt"></i> Delete
 
                                         </a>
